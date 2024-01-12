@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qeezz App</title>
+    <link rel="stylesheet" href="index.css" />
+    <script defer type="module" src="script.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="Verification">
+        <div class="userDetails">
+          <div class="left">
+            <div class="left_content">
+              <h1>Welcome To Qeezz</h1>
+              <h2>Mind Mingle Marathon</h2>
+              <h5>
+                Welcome to Qeezz Fun,
+                <br />
+                where knowledge meets excitement <br />
+                seamlessly!
+              </h5>
+            </div>
+          </div>
+          <div class="right">
+            <div class="right_content">
+              <label for="username">Username:</label>
+              <br />
+              <input
+                type="text"
+                name=""
+                id="username"
+                placeholder="Username"
+                autocomplete="off" />
+              <br />
+              <label for="Profession">Age</label>
+              <br />
+              <input
+                type="number"
+                placeholder="Enter Your Age:"
+                id="Profession" />
+              <br />
+              <button id="EnterBtn">Enter</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="typeSelector">
+        <div class="types">
+          <img
+            src="/src/chemistry.jpg"
+            alt=""
+            class="chemistry typeSubject"
+            data-tag="Chemistry" />
+
+          <img
+            src="/src/Math.jpg"
+            alt=""
+            class="typeSubject Math"
+            data-tag="Math" />
+
+          <img
+            src="/src/physics.jpg"
+            alt=""
+            class="typeSubject Physics"
+            data-tag="Physics" />
+        </div>
+        <div class="quizs">
+          <div class="rankingBoard">
+            <!-- <div class="ranker">
+              <div class="left_rank">
+                <div class="name">Prakash</div>
+
+                <div class="age">20</div>
+              </div>
+              <div class="rank_score">7</div>
+            </div> -->
+          </div>
+          <div class="questions">
+            <div class="question_bar">
+              <h3>
+                Q.<span style="margin-left: 10px" class="questionDisplay"
+                  >What is the capital of the nation</span
+                >
+                <hr />
+              </h3>
+              <div class="options">
+                <form class="form">
+                  <label>
+                    <input type="radio" name="options" value="A" /><span id="A"
+                      >A</span
+                    >
+                  </label>
+                  <br />
+                  <label>
+                    <input type="radio" name="options" value="B" /><span id="B"
+                      >B</span
+                    >
+                  </label>
+                  <br />
+                  <label>
+                    <input type="radio" name="options" value="C" /><span id="C"
+                      >C</span
+                    >
+                  </label>
+                  <br />
+                  <label>
+                    <input type="radio" name="options" value="D" /><span id="D"
+                      >D</span
+                    >
+                  </label>
+                  <br />
+                  <button class="questionSubmit">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="dashboard">
+            <div class="dashboard_card">
+              <h2>Dashboard</h2>
+              <div class="subjectDashboard">chemistry:</div>
+              <div class="cardDisplay">
+                <div class="rightWrong"></div>
+                <div class="totalScore"></div>
+                <button class="reload reloadHide">Reset Game</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+      integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+  </body>
+</html>

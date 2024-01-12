@@ -1,0 +1,441 @@
+@import url("https://fonts.googleapis.com/css2?family=Lemon&family=Open+Sans&family=Poppins&family=Roboto+Condensed&family=Rubik&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow: hidden; */
+  font-family: "Poppins", sans-serif;
+}
+::-webkit-scrollbar {
+  opacity: 0;
+}
+:root {
+  --bg-color: linear-gradient(to bottom, #221f1f, #262424dc);
+}
+main {
+  width: 100vw;
+  height: 100vh;
+  background-color: #14213d;
+  position: relative;
+}
+.types h1 {
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+.Verification {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  background-color: #14213d;
+  z-index: 100;
+  /* display: none; */
+}
+.userDetails {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left {
+  width: 60%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+.left_content {
+  font-size: 1.3rem;
+}
+.left::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: url("./src/blob\ \(2\).svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.right {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+.right_content {
+  font-size: 25px;
+  width: 60%;
+  color: white;
+  font-weight: 800;
+}
+.right_content input {
+  width: 90%;
+  padding: 5px;
+  border-radius: 4px;
+  outline: none;
+  background-color: transparent;
+  border: 1px solid gray;
+  color: rgb(255, 254, 254);
+}
+.right_content button {
+  padding: 5px;
+  margin-top: 10px;
+  border: 1px solid gray;
+  background-color: #a3c0ba;
+  outline: none;
+  border-radius: 3px;
+  margin-left: 8px;
+}
+.right_content button:active {
+  background-color: #ccfbf1;
+}
+
+/* /////////////////////////////////// */
+/* /////////////////////////////////// */
+@media (max-width: 1020px) {
+  .left {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+  .left_content {
+    font-size: 1rem;
+  }
+}
+
+/* /////////////////////////////////// */
+/* /////////////////////////////////// */
+.typeSelector {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.types {
+  height: 20%;
+  width: 100%;
+}
+.quizs {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rankingBoard {
+  width: 25%;
+  border-radius: 8px;
+  margin: 10px;
+  height: 40%;
+  background: url("https://images.rawpixel.com/image_600/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA2L2pvYjE3MDMtYmFja2dyb3VuZC1qYWFhLTA1LmpwZw.jpg")
+    center center/cover;
+  color: white;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px;
+  flex-direction: column;
+  overflow: auto;
+  opacity: 0;
+  transition: 0.4s all;
+  box-shadow: -1px 2px 20px rgba(255, 255, 255, 0.15);
+}
+.ranker {
+  margin: 5px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 2px solid gray;
+  border-radius: 10px;
+  background-color: #c1baba72;
+  font-size: 15px;
+  font-weight: 800;
+  min-height: 50px;
+  transition: 0.4s all;
+}
+
+.moreThanFive {
+  background-color: rgba(131, 229, 131, 0.339);
+  border: none;
+}
+.lessThanFive {
+  background-color: rgba(232, 22, 22, 0.285);
+  border: none;
+}
+.ranker:hover {
+  border: 1px solid white;
+}
+.left_rank {
+  display: flex;
+  color: white;
+  font-size: 1.1rem;
+}
+.name {
+  margin-right: 5px;
+}
+.age {
+  margin-left: 5px;
+}
+.rank_score {
+  color: rgb(37, 217, 97);
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+
+.questions {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+}
+.question_bar {
+  color: white;
+  transition: 0.4s;
+  opacity: 0;
+  width: 100%;
+  height: 350px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.259),
+    inset 10px 10px 30px rgba(255, 255, 255, 0.078);
+  font-weight: 700;
+  position: relative;
+  z-index: 3;
+  letter-spacing: 1px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.question_bar::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url("https://images.rawpixel.com/image_600/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA2L2pvYjE3MDMtYmFja2dyb3VuZC1qYWFhLTA1LmpwZw.jpg")
+    center center/cover;
+  filter: brightness(70%);
+  z-index: -1;
+}
+.question_bar h3 {
+  line-height: 2;
+}
+.options {
+  flex: 1;
+}
+.form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.questionSubmit {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  width: 100px;
+}
+.form br {
+  display: none;
+}
+.form label,
+input {
+  margin: 7px;
+  line-height: 1;
+}
+.dashboard {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  margin: 15px;
+}
+.questionSubmit {
+  padding: 5px;
+}
+
+.types {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.typeSubject {
+  height: 120px;
+  width: 120px;
+  object-fit: cover;
+  transition: 0.4s all;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.typeSubject:hover {
+  filter: drop-shadow(0 0 10px white);
+}
+.dashboard_card {
+  text-align: center;
+  width: 100%;
+  height: 40%;
+  border-radius: 6px;
+  color: white;
+  background: url("https://images.rawpixel.com/image_600/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA2L2pvYjE3MDMtYmFja2dyb3VuZC1qYWFhLTA1LmpwZw.jpg")
+    center center/cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: -1px 2px 20px rgba(255, 255, 255, 0.15);
+}
+.final {
+  position: absolute;
+  left: 50%;
+  z-index: 10;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 250px;
+  padding: 20px;
+  transition: 0.4s all;
+}
+.reloadHide {
+  opacity: 0;
+  transition: 0.4s all;
+}
+.dashboard_card h2 {
+  margin-top: 10px;
+}
+.cardDisplay {
+  flex: 1;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  align-items: center;
+  font-size: 20px;
+}
+.totalScore {
+  font-size: 26px;
+  color: rgb(186, 166, 159);
+}
+.subjectDashboard {
+  font-weight: 800;
+}
+@media (max-width: 820px) {
+  .userDetails {
+    flex-direction: column;
+    width: 100%;
+    /* justify-content: space-between; */
+  }
+  .left {
+    width: 100%;
+  }
+  .left_content {
+    scale: 0.7;
+  }
+  .left_content h5 {
+    font-size: 18px;
+  }
+  .right {
+    width: 100%;
+  }
+  .types {
+    max-height: 100px;
+  }
+  .types img {
+    width: 80px;
+    height: 80px;
+  }
+  .quizs {
+    flex: 1;
+    flex-direction: column;
+  }
+  .questions {
+    order: -1;
+    min-width: 90%;
+    height: 950px;
+  }
+  .form label,
+  input {
+    line-height: 0;
+    /* margin: 10px; */
+  }
+  .rankingBoard {
+    width: 90%;
+    height: 500px;
+    margin: 0;
+  }
+  .dashboard {
+    height: 100%;
+    width: 100%;
+    margin: 5px;
+  }
+  .dashboard_card {
+    width: 90%;
+    height: 100%;
+  }
+  .final {
+    height: 35%;
+    width: 99%;
+  }
+  .question_bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 14px;
+  }
+  .question_bar h3 {
+    /* font-size: 12px; */
+    line-height: normal;
+    margin-top: 10px;
+    text-align: left;
+  }
+  .options {
+    height: 250px;
+  }
+  label span {
+    line-height: 1.4;
+    text-align: left;
+  }
+  .form {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .form br {
+    display: none;
+  }
+  .questionSubmit {
+    position: absolute;
+    bottom: 1rem;
+    width: 90%;
+  }
+}
